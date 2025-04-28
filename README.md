@@ -1,59 +1,91 @@
-Commission Fee Calculator
+# 💼 Commission Fee Calculator
 
-    This PHP application processes financial operations from a CSV file and calculates commission fees based on specific rules for private and business clients.
+This PHP application processes financial operations from a CSV file and calculates commission fees based on specified rules for private and business clients.
 
-Running the Script
+---
 
-    Prerequisites
-        PHP >= 8.0
+## 🚀 How to Run the Script
 
-        Composer (for autoloading)
+### Prerequisites
+- PHP >= 8.0
+- Composer (for autoloading)
 
-    Installation
-        Clone or download the project.
+### Installation Steps
 
-        Install dependencies:
-            composer install
+1. Clone the project or download it.
+2. Install dependencies:
 
-    Execute the script
-        Use the following command:
-            php script.php path/to/your/file.csv
-        Example:
-            php script.php input.csv
-        The script will read the operations from input.csv, calculate the commission fees, and output the results line by line.
-
-Run Automated Tests
-    A test is included to validate the expected behavior with the provided sample data.
-
-    To run the tests:
-        composer run test
-    The tests will process the given operations and check that the output matches the expected results.
-
-Project Structure
-    src/Service/CommissionCalculator.php → Commission fee calculation logic.
-
-    src/Service/ExchangeRateService.php → Fetches exchange rates.
-
-    src/Service/CsvReader.php → Reads CSV files.
-
-    src/Model/Operation.php → Represents a financial operation.
+```bash
+composer install
+```
 
 
-Notes
+## ⚡ Execute the Script
 
-    No framework is used, only pure PHP and Composer for autoloading.
+To run the script, use:
 
-    No temporary files or databases are used.
+```bash
+php script.php path/to/your/input.csv
+```
 
-    The project follows PSR-4 autoloading and PSR-12 coding standards.
+**Example:**
 
-Example input
+```bash
+php script.php input.csv
+```
 
-    Contents of an example input.csv file:
+The script will process the operations listed in the CSV file and print the commission fees for each operation.
 
-        2014-12-31,4,private,withdraw,1200.00,EUR
-        2015-01-01,4,private,withdraw,1000.00,EUR
+---
 
+## 🧪 Run Automated Tests
 
-Author
-Developed by [Ismail Azzarraa].
+The project includes a simple automated test that processes the provided example and checks the output.
+
+To execute the tests:
+
+```bash
+composer run test
+```
+
+Make sure you have installed PHPUnit via Composer before running the tests.
+
+---
+
+## 📜 Project Structure
+
+- `src/Service/CommissionCalculator.php` → Handles the calculation logic.
+- `src/Service/ExchangeRateService.php` → Fetches exchange rates.
+- `src/Service/CsvReader.php` → Reads and parses the CSV file.
+- `src/Model/Operation.php` → Represents a financial operation.
+
+---
+
+## 📌 Important Notes
+
+- No framework is used (pure PHP).
+- No temporary files, external databases, or external services beyond the exchange rate API are used.
+- The project follows PSR-4 autoloading and PSR-12 coding standards.
+- Calculations are done fully in memory.
+
+---
+
+## 📈 Example Input
+
+A sample `input.csv` should look like:
+
+```csv
+2014-12-31,4,private,withdraw,1200.00,EUR
+2015-01-01,4,private,withdraw,1000.00,EUR
+2016-01-05,4,private,withdraw,1000.00,EUR
+...
+```
+
+---
+
+## 🔥 Author
+
+Developed by **Ismail Azzarraa**.
+
+---
+
